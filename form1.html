@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container justify-content-center">
+        <h2 class="text-center"><b>Fill This Form</b></h2>
+        <form action="./formsent.html" novalidate class="myvalidation">
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <label for="" class="col-form-label">Name *</label>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-3">
+                    <label for="" class="col-form-label">Father Name *</label>
+                    <input type="text" class="form-control" placeholder="Father Name" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="" class="col-form-label">Phone No</label>
+                    <input type="text" class="form-control" placeholder="Phone No" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="budget" class="col-form-label">Permanent Address</label>
+                    <input type="text" class="form-control" placeholder="Address" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="budget" class="col-form-label">Institute/University</label>
+                    <input type="text" class="form-control" placeholder="Institute/university" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="budget" class="col-form-label">Working Experience</label>
+                    <input type="text" class="form-control" placeholder="Working Experience" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label for="budget" class="col-form-label">Any past project? If just past the live URL or YouTube demoWorking Experience</label>
+                    <input type="text" class="form-control" placeholder="Past Project URL" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <label for="" class="col-form-label">From where did you know about the internee.pk?
+                      *</label><br>
+                      <input type="radio" name="" id="" class="form-check-input">
+                      <label for="" class="form-label">Social Media</label><br>
+                      <input type="radio" name="" id="" class="form-check-input">
+                      <label for="" class="form-label">Internet</label><br>
+                      <input type="radio" name="" id="" class="form-check-input">
+                      <label for="" class="form-label">Friends or classmates</label><br>
+                      <input type="radio" name="" id="" class="form-check-input">
+                      <label for="" class="form-label">Whatsapp Group</label>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <label for="budget" class="col-form-label">What do you expect from this internship?</label>
+                    <input type="text" class="form-control" placeholder="Your message" required>
+                    <div class="invalid-feedback">
+                        This is a Required Question
+                    </div>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                    <label for="myfile" class="col-form-label">Did you share our post in any WhatsApp group? (You have to share in at least 1 WhatsApp group and share the screenshot)
+                      *</label>
+                    <input type="file" class="form-control" name="file" id="file" placeholder="Your subject" required>
+                    <div class="invalid-feedback text-">
+                      This is a required Question
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 form-group mb-3">
+                    <label for="myfile" class="col-form-label">Resume/CV
+                      *</label>
+                    <input type="file" class="form-control" name="file" id="file" placeholder="Your subject" required>
+                    <div class="invalid-feedback text-">
+                      This is a required Question
+                    </div>
+                  </div>
+                
+            
+                <div class="col-md-12 mt-3 d-grid">
+                    <input type="submit" onclick="validate_data()" class="btn btn-success">
+                </div>
+            </div>
+        </form>
+    </div>
+
+<script>
+    var forms = document.querySelectorAll('.myvalidation')
+
+// Loop over them and prevent submission
+Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+</script>
+
+</body>
+</html>
